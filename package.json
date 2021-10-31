@@ -1,0 +1,30 @@
+{
+  "name": "shorter-revamp",
+  "version": "2.0.0",
+  "description": "revamp of shorter",
+  "main": "index.js",
+  "scripts": {
+    "test": "node .",
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustHxnry/shorter-revamp.git"
+  },
+  "author": "hxnry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustHxnry/shorter-revamp/issues"
+  },
+  "homepage": "https://github.com/JustHxnry/shorter-revamp#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.3.6",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.14",
+    "shortid": "^2.2.16",
+    "valid-url": "^1.0.9"
+  }
+}
