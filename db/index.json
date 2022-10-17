@@ -1,8 +1,8 @@
 {
     "name":"Url Shortener Revamped",
     "version":"2.0.0",
-    "author":"Hxnry",
-    "projectUrl":"https://url.hxnrycz.xyz/",
+    "author":"Duta Bloger",
+    "projectUrl":"https://www.sflinku.eu.org/",
     "db_type":"Application/json",
     "Endpoints":[
         "/",
