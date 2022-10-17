@@ -181,7 +181,7 @@ app.get('/assets/style', async (req, res) => {
     } else if (name === 'css') {
         res.sendFile(__dirname+"/public/style.css");
     } else if (name === 'img_icon') {
-        res.sendFile(__dirname+"/icon.png");
+        res.sendFile(__dirname+"/public/icon.png");
     } else {
         res.json({
             code: 404,
