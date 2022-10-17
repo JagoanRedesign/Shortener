@@ -6,13 +6,13 @@
   <meta property="og:type" content="website">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="./icon.png">
-  <link rel="apple-touch-icon" href="./icon.png">
-  <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
-  <meta itemprop="image" content="/thumb130722.jpg">
-  <meta name="twitter:image" content="/thumb130722.jpg">
-  <meta name="twitter:image:src" content="/thumb130722.jpg">
-  <meta property="og:image" content="/thumb130722.jpg">
+  <link rel="icon" href="/assets/style?type=img_icon">
+  <link rel="apple-touch-icon" href="/assets/style?type=img_icon">
+  <link rel="shortcut icon" href="/assets/style?type=img_icon" type="image/x-icon">
+  <meta itemprop="image" content="/assets/style?type=img_icon">
+  <meta name="twitter:image" content="/assets/style?type=img_icon">
+  <meta name="twitter:image:src" content="/assets/style?type=img_icon">
+  <meta property="og:image" content="/assets/style?type=img_icon">
   <title>Link Shortener</title>
   <meta itemprop="name" content="Link Shortener">
   <meta property="og:title" content="Link Shortener">
@@ -25,6 +25,7 @@
    <link rel="stylesheet" type="text/css" href="/assets/style?type=css">
  </head>
  <body>
+   <div id='toastNotif' class='tNtf'></div>
   <noscript>
    You need to enable JavaScript to run this app.
   </noscript>
@@ -32,7 +33,7 @@
    <div>
     <div class="home_bodyWrap__jvWMr">
      <div class="home_logo__K7uuG">
-      <img src="https://link.roshan.cyou/icon.png">
+      <img src="/assets/style?type=img_icon">
       <span>Shorted URL</span>
       <div></div>
      </div>
@@ -63,7 +64,7 @@
     navigator.clipboard.writeText(copyText).then(() => {
         // Alert the user that the action took place.
         // Nobody likes hidden stuff being done under the hood!
-        alert("Copied to clipboard");
+        document.getElementById('toastNotif').innerHTML = '<span>Copied to clipboard</span>';
     });
   }
 </script>
