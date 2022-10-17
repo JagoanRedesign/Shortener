@@ -1,22 +1,51 @@
-<html>
-	<head>
-		<title>URL Shortener | url.hxnrycz.xyz</title>
-		<link rel="shortcut icon" href="/assets/style?type=img_pfp">
-		<link rel="stylesheet" type="text/css" href="/assets/style?type=css">
-	</head>
-	<body class="container"><br><br><br><br><br><br><br><br>
-		<center>
-			<fieldset class="form">
-				<legend style="text-align: center;"><h1>Short URL</h1></legend>
-				<form method="POST" action="/p">
-					<label>URL: </label><input class="form-input" type="url" name="url" placeholder="https://example.com" value="<%= url %>"><br><br>
-					<label>String Length: </label><input class="form-input" type="number" name="length" placeholder="8" value="<%= n %>"><br><br>
-					<button class="form-button" type="submit" name="submit">Short URL!</button>
-				</form>
-			</fieldset>
-		</center>
-	</body>
-	<footer>
-		<p class="footer-copyright">Hxnry &copy; 2021 - <%= thisyear %></p>
-	</footer>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#643af6">
+  <meta property="og:type" content="website">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="./icon.png">
+  <link rel="apple-touch-icon" href="./icon.png">
+  <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+  <meta itemprop="image" content="/thumb130722.jpg">
+  <meta name="twitter:image" content="/thumb130722.jpg">
+  <meta name="twitter:image:src" content="/thumb130722.jpg">
+  <meta property="og:image" content="/thumb130722.jpg">
+  <title>Link Shortener</title>
+  <meta itemprop="name" content="Link Shortener">
+  <meta property="og:title" content="Link Shortener">
+  <meta name="twitter:title" content="Link Shortener">
+  <meta itemprop="description" content="Free to use link shortener with custom short link suffix and visitors count tracking.">
+  <meta property="og:description" content="Free to use link shortener with custom short link suffix and visitors count tracking.">
+  <meta name="twitter:description" content="Free to use link shortener with custom short link suffix and visitors count tracking.">
+  <meta name="description" content="Free to use link shortener with custom short link suffix and visitors count tracking."> 
+<link rel="stylesheet" type="text/css" href="/assets/style?type=css">
+ </head>
+ <body>
+  <noscript>
+   You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root">
+   <div>
+    <div class="home_bodyWrap__jvWMr">
+     <div class="home_logo__K7uuG">
+      <img src="https://link.roshan.cyou/icon.png">
+      <span>Link Shortener</span>
+      <div></div>
+     </div>
+     <form method="POST" action="/p" class="home_card__mlCdW home_cardNoShort__C3fHY">
+
+<input class="home_inputBox__9LE2w" type="url" name="url" placeholder="Enter long link" value="<%= url %>">
+
+<input class="home_inputBox__9LE2w" type="number" name="length" placeholder="8" value="<%= n %>">
+
+      <button class="home_shortBtn__X+6Bb home_shortBtnNP__ipRL7" type="submit" name="submit">Shorten Link</button>
+     </form>
+
+    </div>
+   </div>
+  </div>
+ </body>
 </html>
