@@ -1,12 +1,12 @@
 {
-    "name":"Url Shortener Revamped",
+    "name":"Shortener",
     "version":"2.0.0",
-    "author":"Hxnry",
-    "projectUrl":"https://url.hxnrycz.xyz/",
+    "author":"Duta",
+    "projectUrl":"https://www.sflinku.eu.org/",
     "db_type":"Application/json",
     "Endpoints":[
         "/",
-        "/p",
+        "/create",
         "/r",
         "/u",
         "/a",
