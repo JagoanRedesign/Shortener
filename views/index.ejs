@@ -6,13 +6,13 @@
   <meta property="og:type" content="website">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="./icon.png">
-  <link rel="apple-touch-icon" href="./icon.png">
-  <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
-  <meta itemprop="image" content="/thumb130722.jpg">
-  <meta name="twitter:image" content="/thumb130722.jpg">
-  <meta name="twitter:image:src" content="/thumb130722.jpg">
-  <meta property="og:image" content="/thumb130722.jpg">
+  <link rel="icon" href="/assets/style?type=img_icon">
+  <link rel="apple-touch-icon" href="/assets/style?type=img_icon">
+  <link rel="shortcut icon" href="/assets/style?type=img_icon" type="image/x-icon">
+  <meta itemprop="image" content="/assets/style?type=img_icon">
+  <meta name="twitter:image" content="/assets/style?type=img_icon">
+  <meta name="twitter:image:src" content="/assets/style?type=img_icon">
+  <meta property="og:image" content="/assets/style?type=img_icon">
   <title>Link Shortener</title>
   <meta itemprop="name" content="Link Shortener">
   <meta property="og:title" content="Link Shortener">
@@ -31,15 +31,15 @@
    <div>
     <div class="home_bodyWrap__jvWMr">
      <div class="home_logo__K7uuG">
-      <img src="https://link.roshan.cyou/icon.png">
+      <img src="/assets/style?type=img_icon">
       <span>Link Shortener</span>
       <div></div>
      </div>
-     <form method="POST" action="/p" class="home_card__mlCdW home_cardNoShort__C3fHY">
+     <form method="POST" action="/create" class="home_card__mlCdW home_cardNoShort__C3fHY">
 
 <input class="home_inputBox__9LE2w" type="url" name="url" placeholder="Enter long link" value="<%= url %>">
 
-<input class="home_inputBox__9LE2w" type="number" name="length" placeholder="8" value="<%= n %>">
+<input class="home_inputBox__9LE2w" type="number" name="length" placeholder="String Length" value="<%= n %>">
 
       <button class="home_shortBtn__X+6Bb home_shortBtnNP__ipRL7" type="submit" name="submit">Shorten Link</button>
      </form>
