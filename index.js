@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
         }
     };
 });
-app.post('/p', async (req, res) => {
+app.post('/create', async (req, res) => {
     var urls_loc = './db/urls.json';
     let urls = JSON.parse(fs.readFileSync(urls_loc));
     var clicks_loc = './db/clicks.json';
@@ -52,19 +52,19 @@ app.post('/p', async (req, res) => {
     fs.writeFileSync(urls_loc,JSON.stringify(urls));
     fs.writeFileSync(clicks_loc,JSON.stringify(clicks));
     res.render('result', {
-        base: 'https://url.hxnrycz.xyz/r?u='+id,
+        base: 'https://www.sflinku.eu.org/r?u='+id,
         thisyear: now.getFullYear()
     });
     let data = {
         operation: "create",
         shortId: id,
-        baseUrl: "https://url.hxnrycz.xyz/r?u="+id,
+        baseUrl: "https://www.sflinku.eu.org/r?u="+id,
         longUrl: request.url,
         clicks: 0
     };
     console.log(data);
 });
-app.get('/p', async (req, res) => {
+app.get('/create', async (req, res) => {
     res.redirect("/");
 });
 app.get('/r', async (req, res) => {
@@ -82,7 +82,7 @@ app.get('/r', async (req, res) => {
         let data = {
             operation: "query_redirect",
             shortId: u,
-            baseUrl: "https://url.hxnrycz.xyz/r?u="+u,
+            baseUrl: "https://sflinku.eu.org/r?u="+u,
             longUrl: urls[u],
             clicks: clicks[u]
         };
@@ -100,7 +100,7 @@ app.get('/r/:u', async (req, res) => {
         let data = {
             operation: "params_redirect",
             shortId: u,
-            baseUrl: "https://url.hxnrycz.xyz/r/"+u,
+            baseUrl: "https://sflinku.eu.org/r/"+u,
             longUrl: urls[u],
             clicks: clicks[u]
         };
@@ -154,8 +154,8 @@ app.get('/a', async (req, res) => {
     var json = {
         name: u,
         urls: [
-            "https://url.hxnrycz.xyz/r?u="+u,
-            "https://url.hxnrycz.xyz/r/"+u,
+            "https://sflinku.eu.org/r?u="+u,
+            "https://sflinku.eu.org/r/"+u,
             urls[u]
         ],
         clicks: clicks[u]
@@ -180,8 +180,8 @@ app.get('/assets/style', async (req, res) => {
         });
     } else if (name === 'css') {
         res.sendFile(__dirname+"/public/style.css");
-    } else if (name === 'img_pfp') {
-        res.sendFile(__dirname+"/public/pfp.png");
+    } else if (name === 'img_icon') {
+        res.sendFile(__dirname+"/icon.png");
     } else {
         res.json({
             code: 404,
