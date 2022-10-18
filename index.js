@@ -99,13 +99,13 @@ app.post('/create', async (req, res) => {
     fs.writeFileSync(urls_loc,JSON.stringify(urls));
     fs.writeFileSync(clicks_loc,JSON.stringify(clicks));
     res.render('result', {
-        base: 'https://www.sflinku.eu.org/r?u='+id,
+        base: 'https://sflinku.eu.org/r?u='+id,
         thisyear: now.getFullYear()
     });
     let data = {
         operation: "create",
         shortId: id,
-        baseUrl: "https://www.sflinku.eu.org/r?u="+id,
+        baseUrl: "https://sflinku.eu.org/r?u="+id,
         longUrl: request.url,
         clicks: 0
     };
