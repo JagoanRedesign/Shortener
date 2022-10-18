@@ -35,6 +35,52 @@ app.get('/', (req, res) => {
     };
 });
 
+app.get('/re', (req, res) => {
+    var thisyear = now.getFullYear();
+    var url = req.query.url;
+    var n = req.query.length;
+    if (url === !url) {
+        if (n === !n) {
+            res.render(req, {thisyear: thisyear, url: "", n: 8});
+        } else if (typeof n === 'number') {
+            res.render('checking', {thisyear: thisyear, url: "", n: n});
+        } else {
+            res.render('checking', {thisyear: thisyear, url: "", n: 8});
+        }
+    } else {
+        if (n === !n) {
+            res.render('checking', {thisyear: thisyear, url: url, n: 8});
+        } else if (typeof n === 'number') {
+            res.render('checking', {thisyear: thisyear, url: url, n: n});
+        } else {
+            res.render('checking', {thisyear: thisyear, url: url, n: 8});
+        }
+    };
+});
+
+app.get('/generate', (req, res) => {
+    var thisyear = now.getFullYear();
+    var url = req.query.url;
+    var n = req.query.length;
+    if (url === !url) {
+        if (n === !n) {
+            res.render('generate', {thisyear: thisyear, url: "", n: 8});
+        } else if (typeof n === 'number') {
+            res.render('generate', {thisyear: thisyear, url: "", n: n});
+        } else {
+            res.render('generate', {thisyear: thisyear, url: "", n: 8});
+        }
+    } else {
+        if (n === !n) {
+            res.render('generate', {thisyear: thisyear, url: url, n: 8});
+        } else if (typeof n === 'number') {
+            res.render('generate', {thisyear: thisyear, url: url, n: n});
+        } else {
+            res.render('generate', {thisyear: thisyear, url: url, n: 8});
+        }
+    };
+});
+
 app.post('/create', async (req, res) => {
     var urls_loc = './db/urls.json';
     let urls = JSON.parse(fs.readFileSync(urls_loc));
@@ -171,22 +217,23 @@ app.get('/a', async (req, res) => {
         res.json(json);
     }
 });
-//Checking
-app.get('/re', async (req, res) => {
+//assets
+app.get('/assets/style', async (req, res) => {
     var name = req.query.type;
     if (name === !name) {
-        res.sendFile(__dirname+"/views/checking.html");
+        res.json({
+            code: 404,
+            title: "Not Found"
+        });
+    } else if (name === 'css') {
+        res.sendFile(__dirname+"/public/style.css");
+    } else if (name === 'img_icon') {
+        res.sendFile(__dirname+"/icon.png");
     } else {
-        res.sendFile(__dirname+"/views/checking.html");
-    };
-});
-
-app.get('/generate', async (req, res) => {
-    var name = req.query.type;
-    if (name === !name) {
-        res.sendFile(__dirname+"/views/generate.html");
-    } else {
-        res.sendFile(__dirname+"/views/generate.html");
+        res.json({
+            code: 404,
+            title: "Not Found"
+        });
     };
 });
 
