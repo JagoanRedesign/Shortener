@@ -6,13 +6,13 @@
     "db_type":"Application/json",
     "Endpoints":[
         "/",
-        "/create",
-        "/generate",
+        "/create",        
         "/r",
-        "/re",
         "/u",
         "/a",
         "/assets/style",
+        "/re",
+        "/generate",
         "/db"
     ]
 }
