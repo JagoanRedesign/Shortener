@@ -39,23 +39,7 @@ app.get('/re', (req, res) => {
     var thisyear = now.getFullYear();
     var url = req.query.url;
     var n = req.query.length;
-    if (url === !url) {
-        if (n === !n) {
-            res.render(req, {thisyear: thisyear, url: "", n: 8});
-        } else if (typeof n === 'number') {
-            res.render('checking', {thisyear: thisyear, url: "", n: n});
-        } else {
-            res.render('checking', {thisyear: thisyear, url: "", n: 8});
-        }
-    } else {
-        if (n === !n) {
-            res.render('checking', {thisyear: thisyear, url: url, n: 8});
-        } else if (typeof n === 'number') {
-            res.render('checking', {thisyear: thisyear, url: url, n: n});
-        } else {
-            res.render('checking', {thisyear: thisyear, url: url, n: 8});
-        }
-    };
+res.render('checking');  
 });
 
 app.post('/create', async (req, res) => {
