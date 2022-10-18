@@ -58,29 +58,6 @@ app.get('/re', (req, res) => {
     };
 });
 
-app.get('/generate', (req, res) => {
-    var thisyear = now.getFullYear();
-    var url = req.query.url;
-    var n = req.query.length;
-    if (url === !url) {
-        if (n === !n) {
-            res.render('generate', {thisyear: thisyear, url: "", n: 8});
-        } else if (typeof n === 'number') {
-            res.render('generate', {thisyear: thisyear, url: "", n: n});
-        } else {
-            res.render('generate', {thisyear: thisyear, url: "", n: 8});
-        }
-    } else {
-        if (n === !n) {
-            res.render('generate', {thisyear: thisyear, url: url, n: 8});
-        } else if (typeof n === 'number') {
-            res.render('generate', {thisyear: thisyear, url: url, n: n});
-        } else {
-            res.render('generate', {thisyear: thisyear, url: url, n: 8});
-        }
-    };
-});
-
 app.post('/create', async (req, res) => {
     var urls_loc = './db/urls.json';
     let urls = JSON.parse(fs.readFileSync(urls_loc));
@@ -217,23 +194,12 @@ app.get('/a', async (req, res) => {
         res.json(json);
     }
 });
-//assets
-app.get('/assets/style', async (req, res) => {
+app.get('/generate', async (req, res) => {
     var name = req.query.type;
     if (name === !name) {
-        res.json({
-            code: 404,
-            title: "Not Found"
-        });
-    } else if (name === 'css') {
-        res.sendFile(__dirname+"/public/style.css");
-    } else if (name === 'img_icon') {
-        res.sendFile(__dirname+"/icon.png");
+        res.sendFile(__dirname+"/public/generate.html");
     } else {
-        res.json({
-            code: 404,
-            title: "Not Found"
-        });
+        res.sendFile(__dirname+"/public/generate.html");
     };
 });
 
